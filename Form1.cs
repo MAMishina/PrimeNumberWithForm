@@ -123,9 +123,7 @@ namespace PrimeNumberWithForm
 
         private void input_textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char number = e.KeyChar;
-
-            if (!Char.IsDigit(number) && !(e.KeyChar == 8))
+            if (!(e.KeyChar>47 && e.KeyChar<58) && !(e.KeyChar == 8))
             {
                 e.Handled = true;
             }
